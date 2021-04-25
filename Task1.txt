@@ -1,0 +1,27 @@
+1.
+1.1 Create a shell scenario, which dependently on taken argument starting two different
+custom Docker images in interactive mode, using your preferred CLI interpreter.
+1.2 Generate and keep in the repository in secure way SSH key for Ansible/Terraform
+remote access.
+• Ansible container must include:
+o Latest stable versions of Ansible and AWS CLI packages.
+o Your most widely used CLI tools(determined in an obvious way).
+o Environment variables:
+§ A couple of typical Ansible config system variables.
+§ One quick bash alias/function for ansible run.
+§ AWS CLI authentication keys(or use an alternative authentication
+method)
+o Attach as volumes:
+§ Directory with simple Ansible playbook, role, and inventory.
+§ Directory with a previously generated SSH key.
+• Terraform container must include:
+o Latest stable version of Terraform, compiled from source.
+o Your most widely used CLI tools(determined in an obvious way).
+o Define environment values for:
+§ Terraform AWS authentication data.
+§ Quick shell aliases for "terraform init", "terraform plan" and
+"terraform apply"
+o Attach as volume:
+§ Directory with terraform resources which creates minimal AWS EC2
+configuration.
+§ Directory with a previously generated SSH key.
